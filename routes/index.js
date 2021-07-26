@@ -11,7 +11,7 @@ const fetchImageUrlFromS3 = require('../lib/fetchImageUrlFromS3');
 /* GET home page. */
 router.get('/', function (req, res, next) {
   letters.findAll().then(results=> {
-      res.render('letters/index', { title: 'index', letters: results }); 
+      res.render('letters/index', { title: 'レター一覧', letters: results }); 
     }
   );
 });
