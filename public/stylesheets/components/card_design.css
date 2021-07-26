@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .flex-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
@@ -13,10 +14,26 @@
   border-radius: 20px;
   box-shadow: 0px 1px 3px 0px rgba(48, 44, 44, 0.2);
   overflow: hidden;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.card__content__subject {
+  font-weight: bold;
 }
 
 .card__content p {
-  padding: 1em 0;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 省略記号（…）を付与 Give an ellipsis (...) */
+  display: -webkit-box;
+  /* 複数行に対応する Support for multiple lines */
+  -webkit-line-clamp: 1;
+  /* 4行目の最後に3点リーダーを付与 In this description, give a three-point leader at the end of the fourth line */
+  -webkit-box-orient: vertical;
+  /* Support for multiple lines */
 }
 
 .card__content:hover {
