@@ -15,8 +15,13 @@ img {
   height: auto;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   width: 90%;
   max-width: 1024px;
   margin: 0 auto 0 auto;
+  padding-top: 100px;
 }

@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/pages/letters/new.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/header.css">
 </head>
 <body>
+    <%- include('../partials/header.ejs') %>
     <div class="container">
         <form action="/letters/new" method="post">
             <p>タイトルを入力してください</p>
