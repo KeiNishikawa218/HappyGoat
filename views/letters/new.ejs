@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/core.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/components/letter_design.css">
+    <link rel="stylesheet" href="/stylesheets/pages/letters/new.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/header.css">
 </head>
 <body>
-    <form action="/letters/new" method="post">
-        <p>タイトルを入力してください</p>
-        <input type="text" name="subject">
-        <p>文字を入力してください。</p>
-        <textarea class="letter_design" type="text" name="body" placeholder="ここに送信したいテキストを入力ください"></textarea>
-        <button type="submit" name="button">送信する</button>
-    </form>
-
+    <%- include('../partials/header.ejs') %>
+    <div class="container">
+        <form action="/letters/new" method="post">
+            <p>タイトルを入力してください</p>
+            <input type="text" name="subject">
+            <p>文字を入力してください。</p>
+            <textarea type="text" name="body" placeholder="ここに送信したいテキストを入力ください"></textarea>
+            <button type="submit" name="button">送信する</button>
+        </form>
+    </div>
+    
     <!-- イメージ -->
     <!-- ユーザが入力したテキストにIDを振る（連番）。画像を保存するblob or URL（テキスト） -->
 

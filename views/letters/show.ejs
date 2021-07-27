@@ -2,27 +2,24 @@
 <html>
 <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/core.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/components/new_post.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/components/letter_design.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
 </head>
 <body>
-    <p>
-        手紙が表示されます!
-    </p>
+    <%- include('../partials/header.ejs') %>
     <div class="container">
-          <div class="card">
-              <div class="card__content">
-                <p><%= letter.subject %></p>
-                <textarea class="letter_design" readonly><%= letter.body %></textarea>
-              </div>
-          </div>
+        <p>あなたが書いたお手紙です🎉</p>
+            <div class="card">
+                <div class="card__content">
+                    <img src="<%= letter.image %>" alt="<%= letter.subject %>">
+                </div>
+            </div>
+            <a href="/letters/new">新規投稿</a>
     </div>
-    <a href="/letters/new">
-        <div class = "new_post">
-            新規投稿
-        </div>
-    </a>
 </body>
 </html>

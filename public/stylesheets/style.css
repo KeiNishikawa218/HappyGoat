@@ -1,11 +1,27 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
   color: #111111;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto 0 auto;
+  padding-top: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

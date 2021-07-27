@@ -2,23 +2,28 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/components/card_design.css' />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/header.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%- include('../partials/header.ejs') %>
     <div class="container">
-      <% for(const letter of letters) { %>
-        <div class="card">
-          <a href="/letters/<%= letter.id %>">
-            <div class="card__content">
-              <p><%= letter.subject %></p>
-              <p><%= letter.body %></p>
-            </div>
-          </a>
-        </div>
-      <% } %>
+      <h1><%= title %></h1>
+      <div class="flex-container">
+        <% for(const letter of letters) { %>
+          <div class="card">
+            <a href="/letters/<%= letter.id %>">
+              <div class="card__content">
+                <p class="card__content__subject"><%= letter.subject %></p>
+                <p><%= letter.body %></p>
+              </div>
+            </a>
+          </div>
+        <% } %>
+      </div>
     </div>
   </body>
 </html>

@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "exe": "node ./lib/execute.js",
     "scss": "sass public/sass:public/stylesheets --watch",
     "mocha": "./node_modules/.bin/mocha"
   },
   "dependencies": {
+    "aws-sdk": "^2.949.0",
+    "canvas": "^2.8.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^10.0.0",
@@ -16,7 +19,9 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
-    "sass": "^1.35.2"
+    "sass": "^1.35.2",
+    "urlsafe-base64": "^1.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "chai": "^4.3.4",
